@@ -1,9 +1,18 @@
 <main>
-  <h1 class="title">Hello from Angular !</h1>
-
-  <!-- Images (and assets) are parsed and loaded from within the public directory -->
-  <img src="/img/logo.png">
+  <table>
+  	<thead>
+  		<th>id</th>
+  		<th ng-click="app.sortByName()">name</th>
+  		<th>username</th>
+  		<th>email</th>
+  	</thead>
+  	<tbody>
+  		<tr ng-repeat="user in app.users track by $index" ng-click="app.getDetails($index)">
+  			<td>{{user.id}}</td>
+  			<td>{{user.name}}</td>
+  			<td>{{user.username}}</td>
+  			<td>{{user.email}}</td>
+  		</tr>
+  	</tbody>
+  </table>
 </main>
-<footer>
-  <a ng-href="{{app.url}}">Webpack Angular Starter</a>
-</footer>
