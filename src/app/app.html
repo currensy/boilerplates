@@ -7,7 +7,7 @@
   		<th>email</th>
   	</thead>
   	<tbody>
-  		<tr ng-repeat="user in app.users track by $index" ng-click="app.getDetails($index)">
+  		<tr ng-repeat="user in app.users track by $index" ng-click="app.open(lg,app.users[$index])">
   			<td>{{user.id}}</td>
   			<td>{{user.name}}</td>
   			<td>{{user.username}}</td>
